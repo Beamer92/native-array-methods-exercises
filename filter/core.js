@@ -1,5 +1,5 @@
 function onlyEven (array) {
-  // your code here
+  return array.filter(x => x % 2 ===0)
 };
 
 function onlyOneWord (array) {
