@@ -3,15 +3,34 @@ function onlyEven (array) {
 };
 
 function onlyOneWord (array) {
-  // your code here
+  return array.filter(x => x.includes(' ') === false)
 };
 
 function positiveRowsOnly (array) {
-  // your code here
+  return array.filter(x => x.some(y => y < 0) === false )
 };
 
 function allSameVowels (array) {
-  // your code here
+
+  return array.filter( x => {
+  const isVowel = function(a) {
+   let vowels = ['a', 'e', 'i', 'o', 'u']
+   return vowels.includes(a)
+  }
+
+  let ivowels = x.split('').filter(x => isVowel(x) === true)
+
+  if(ivowels.every(z => z === ivowels[0]) === true)
+  {
+    return true
+  }
+  else
+  {
+    return false
+  }
+})
+
+
 };
 
 module.exports = {
