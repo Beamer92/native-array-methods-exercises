@@ -1,9 +1,10 @@
 function sum (array) {
-  // your code here
+  return array.reduce(x = (a,b) => a+b)
 }
 
 function productAll (array) {
-  // your code here
+  return array.map(x => x.reduce (y = (a,b) => a*b)
+    ).reduce(z = (a,b) => a*b)
 }
 
 function objectify (array) {
