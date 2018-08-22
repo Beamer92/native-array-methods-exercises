@@ -8,12 +8,26 @@ function productAll (array) {
 }
 
 function objectify (array) {
-  // your code here
+  return array.reduce(function(acc, cur, i){
+   acc[cur[0]] = cur[1]
+   return acc
+}, {})
 
 }
 
 function luckyNumbers (array) {
-  // your code here
+  let str = 'Your lucky numbers are: '
+  return array.reduce(function(acc, cur, i){
+
+  if(i === array.length-1) {
+    acc += 'and ' + cur
+  }
+  else {
+    acc += cur + ', '
+  }
+  return acc
+
+}, str)
 }
 
 
